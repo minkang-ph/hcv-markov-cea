@@ -1,8 +1,7 @@
 # Cost-effectiveness of ledipasvir/sofosbuvir (LS) vs pegylated interferon/ribavirin (PR) for chronic hepatitis C: a Markov model in R
 
-A Markov cohort cost-effectiveness analysis in base R (no packages needed).
-It re-implements a model originally built in Excel as coursework, including
-deterministic and probabilistic sensitivity analyses.
+A Markov cohort cost-effectiveness analysis in base R. 
+It re-implements a model originally built in Excel as coursework, including deterministic and probabilistic sensitivity analyses.
 This is an educational exercise, not a published analysis.
 
 ## Model overview
@@ -69,8 +68,7 @@ is NMB(price = 0) / cohort size.
 
 The tornado diagram ranks the inputs by how much the NMB changes across their ranges.
 The largest drivers are the SVR utility, the discount rate and the Moderate-state utility.
-At the base WTP, LS remains cost-effective across all ranges except when the SVR utility is at its
-lower bound (0.608, below the Moderate utility of 0.66), where the NMB turns negative.
+At the base WTP, LS remains cost-effective across all ranges except when the SVR utility is at its lower bound (0.608, below the Moderate utility of 0.66), where the NMB turns negative.
 
 ![Tornado diagram](figures/tornado.png)
 
@@ -105,18 +103,10 @@ The PSA mean ICER is close to the deterministic base case (12,326 vs 12,387).
 
 ## Limitations
 
-- Utilities are drawn independently, so the SVR utility can fall below the Moderate utility
-  (in roughly a quarter of PSA draws), which is clinically implausible. This produces some draws with
-  negative incremental QALYs and keeps the CEAC below 100% at high WTP. The same applies to the lower
-  bound in the one-way analysis.
+- Utilities are drawn independently, so the SVR utility can fall below the Moderate utility (in roughly a quarter of PSA draws), which is clinically implausible. This produces some draws with negative incremental QALYs and keeps the CEAC below 100% at high WTP. The same applies to the lower bound in the one-way analysis.
 - Discount rates for costs and outcomes are varied jointly, not separately.
 - Natural mortality and treatment prices are fixed in the PSA.
 
-## How to run
-
-1. Install [R](https://cran.r-project.org) (RStudio is optional).
-2. Open `markov_cea_PR_vs_LS.R` and run it from top to bottom. No packages are needed.
-   The probabilistic analysis runs 1,000 model iterations and may take some seconds.
 
 ## Author
 

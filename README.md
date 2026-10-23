@@ -61,8 +61,6 @@ The current LS price is 44,000 EGP per patient.
 
 ### Probabilistic sensitivity analysis
 
-
-
 ![Cost-effectiveness plane](figures/ce_plane.png)
 ![CEAC](figures/ceac.png)
 

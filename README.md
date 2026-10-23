@@ -63,6 +63,8 @@ is NMB(price = 0) / cohort size.
 
 **ICER: 12,387 EGP per QALY gained.** Cohort NMB at the 39% GDP threshold: 21,711,933 EGP.
 
+![Markov trace](figures/markov_trace.png)
+
 ### Deterministic sensitivity analysis
 
 The tornado diagram ranks the inputs by how much the NMB changes across their ranges.
